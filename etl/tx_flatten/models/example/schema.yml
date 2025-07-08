@@ -1,6 +1,13 @@
 
 version: 2
 
+sources:
+  - name: SF_IMS
+    schema: IMS_SCHEMA
+    database: IMS_DB  # optional if not needed
+    tables:
+      - name: SF_IMS
+      
 models:
     - name: flattened_incidents
       description: "A data flattening dbt model"

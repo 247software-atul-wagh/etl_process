@@ -26,4 +26,4 @@ SELECT
   _airbyte_data:"forms"."primary_form"."formData"."department_reporting_default_field_nested_picker"::STRING AS department_reporting,
   _airbyte_data:"forms"."primary_form"."formData"."customer_complaint_default_field_radio_button"::STRING AS customer_complaint,
   _airbyte_data:"forms"."primary_form"."formData"."reported_via_default_field_dropdown"::STRING AS reported_via
-FROM {{ source('SF_IMS', 'IMS_DB') }}
+FROM {{ source('IMS_FLATTEN_SOURCE', 'SF_IMS') }}

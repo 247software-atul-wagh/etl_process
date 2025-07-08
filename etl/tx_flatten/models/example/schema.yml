@@ -1,21 +1,18 @@
-
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+sources:
+  - name: IMS_FLATTEN_SOURCE
+    schema: IMS_SCHEMA
+    database: IMS_DB
+    tables:
+      - name: SF_IMS
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+models:
+  - name: flattened_incidents
+    description: "A data flattening dbt model"
+    columns:
+      - name: _id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null

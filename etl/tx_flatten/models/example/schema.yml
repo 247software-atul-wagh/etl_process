@@ -11,8 +11,8 @@ models:
   - name: flattened_incidents
     description: "A data flattening dbt model"
     columns:
-      - name: _id
-        description: "The primary key for this table"
+      - name: id
+        description: "Airbyte raw unique ID"
         tests:
           - unique
           - not_null

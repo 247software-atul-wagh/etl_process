@@ -1,5 +1,6 @@
 SELECT
-  _ID::STRING AS id,
+  _AIRBYTE_RAW_ID AS id,  -- Use this as the unique id
+  _ID::STRING AS raw_mongo_id,
   FACILITY_ID::STRING AS facility_id,
   INCIDENT_TYPE_ID::STRING AS incident_type_id,
   EVENT_ID::STRING AS event_id,

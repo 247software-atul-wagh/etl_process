@@ -1,20 +1,18 @@
-
 version: 2
 
 sources:
-  - name: SF_IMS
+  - name: IMS_FLATTEN_SOURCE
     schema: IMS_SCHEMA
-    database: IMS_DB  # optional if not needed
+    database: IMS_DB
     tables:
       - name: SF_IMS
-      
-models:
-    - name: flattened_incidents
-      description: "A data flattening dbt model"
-      columns:
-          - name: _id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
 
+models:
+  - name: flattened_incidents
+    description: "A data flattening dbt model"
+    columns:
+      - name: _id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
